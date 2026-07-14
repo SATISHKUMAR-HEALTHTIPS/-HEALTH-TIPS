@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BMI Calculator | Health Tips</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">
+<i class="fas fa-heartbeat"></i> Health Tips
+</a>
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="bmi-calculator.html">
+BMI Calculator
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="nutrition.html">
+Nutrition
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="fitness.html">
+Fitness
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="bg-success text-white py-5">
+
+<div class="container text-center">
+
+<h1 class="display-4 fw-bold">
+
+Body Mass Index Calculator
+
+</h1>
+
+<p class="lead">
+
+Calculate your BMI and understand your weight category.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= BMI CALCULATOR ================= -->
+
+<section class="container py-5">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="card shadow">
+
+<div class="card-header bg-success text-white text-center">
+
+<h3>BMI Calculator</h3>
+
+</div>
+
+<div class="card-body">
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Height (cm)
+
+</label>
+
+<input
+type="number"
+id="height"
+class="form-control"
+placeholder="Enter Height">
+
+</div>
+
+<div class="mb-3">
+
+<label class="form-label">
+
+Weight (kg)
+
+</label>
+
+<input
+type="number"
+id="weight"
+class="form-control"
+placeholder="Enter Weight">
+
+</div>
+
+<div class="d-grid">
+
+<button
+class="btn btn-success btn-lg"
+onclick="calculateBMI()">
+
+Calculate BMI
+
+</button>
+
+</div>
+
+<hr>
+
+<h3 class="text-center">
+
+Your BMI
+
+</h3>
+
+<h2
+id="result"
+class="text-center text-primary">
+
+--
+
+</h2>
+
+<h4
+id="status"
+class="text-center text-success">
+
+</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= BMI TABLE ================= -->
+
+<section class="container pb-5">
+
+<h2 class="text-center text-success mb-4">
+
+BMI Classification
+
+</h2>
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-striped text-center">
+
+<thead class="table-success">
+
+<tr>
+
+<th>BMI</th>
+
+<th>Category</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Below 18.5</td>
+<td>Underweight</td>
+</tr>
+
+<tr>
+<td>18.5 - 24.9</td>
+<td>Normal Weight</td>
+</tr>
+
+<tr>
+<td>25.0 - 29.9</td>
+<td>Overweight</td>
+</tr>
+
+<tr>
+<td>30.0 and Above</td>
+<td>Obesity</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section><!-- ================= HEALTH RECOMMENDATIONS ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="text-success fw-bold">BMI Health Recommendations</h2>
+<p>General advice based on BMI category.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="card border-primary shadow h-100">
+<div class="card-body text-center">
+<h4 class="text-primary">Underweight</h4>
+<p>Eat nutrient-rich foods, increase healthy calories, and consult a healthcare professional if needed.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card border-success shadow h-100">
+<div class="card-body text-center">
+<h4 class="text-success">Normal</h4>
+<p>Maintain a balanced diet, exercise regularly, sleep well, and stay hydrated.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card border-warning shadow h-100">
+<div class="card-body text-center">
+<h4 class="text-warning">Overweight</h4>
+<p>Reduce processed foods, increase physical activity, and practice portion control.</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card border-danger shadow h-100">
+<div class="card-body text-center">
+<h4 class="text-danger">Obesity</h4>
+<p>Work with a healthcare professional on a personalized nutrition and activity plan.</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="container py-5">
+
+<h2 class="text-center text-primary mb-5">
+BMI Calculator FAQ
+</h2>
+
+<div class="accordion" id="bmiFAQ">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button"
+data-bs-toggle="collapse"
+data-bs-target="#faq1">
+
+What is BMI?
+
+</button>
+</h2>
+
+<div id="faq1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Body Mass Index (BMI) is a screening tool that estimates body weight relative to height. It does not directly measure body fat.
+</div>
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+<button class="accordion-button collapsed"
+data-bs-toggle="collapse"
+data-bs-target="#faq2">
+
+Is BMI accurate for everyone?
+
+</button>
+</h2>
+
+<div id="faq2" class="accordion-collapse collapse">
+<div class="accordion-body">
+BMI is a useful screening tool, but it does not account for factors such as muscle mass, age, or body composition.
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white py-4">
+
+<div class="container text-center">
+
+<h3>Health Tips</h3>
+
+<p>
+Know Your BMI • Eat Healthy • Stay Active
+</p>
+<hr>
+
+<p class="mb-0">
+© 2026 Health Tips. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+<!-- ================= BMI JAVASCRIPT ================= -->
+
+<script>
+
+function calculateBMI(){
+
+let height =
+document.getElementById("height").value;
+
+let weight =
+document.getElementById("weight").value;
+
+if(height=="" || weight==""){
+
+alert("Please enter both height and weight.");
+
+return;
+
+}
+
+height = height/100;
+
+let bmi = weight/(height*height);
+
+document.getElementById("result").innerHTML =
+bmi.toFixed(1);
+
+let status="";
+
+if(bmi<18.5){
+
+status="Underweight";
+
+}
+else if(bmi<25){
+
+status="Normal Weight";
+
+}
+else if(bmi<30){
+
+status="Overweight";
+
+}
+else{
+
+status="Obesity";
+
+}
+
+document.getElementById("status").innerHTML=status;
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

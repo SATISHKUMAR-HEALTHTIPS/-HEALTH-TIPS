@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tips | Stay Healthy</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">
+<i class="fas fa-heartbeat"></i> Health Tips
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse"
+id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link active" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="health-tips.html">Health Tips</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="nutrition.html">Nutrition</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="fitness.html">Fitness</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="bg-success text-white py-5">
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1 class="display-4 fw-bold">
+Healthy Living Starts Today
+</h1>
+
+<p class="lead mt-3">
+
+Simple daily habits can improve your physical,
+mental and emotional well-being.
+
+</p>
+
+<a href="health-tips.html"
+class="btn btn-light btn-lg mt-3">
+
+Explore Health Tips
+
+</a>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="best health.jpg"
+class="img-fluid"
+alt="Health">
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+
+<marquee class="bg-warning p-3 fw-bold">
+
+💧 Drink 8 glasses of water daily |
+🥗 Eat more fruits and vegetables |
+🏃 Exercise 30 minutes every day |
+😴 Sleep 7–9 hours every night |
+🧘 Practice meditation for a healthy mind
+
+</marquee>
+
+<!-- ================= TOP 5 HEALTH TIPS ================= -->
+
+<section class="container py-5">
+
+<h2 class="text-center mb-5">
+Top 5 Health Tips
+</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card shadow h-100">
+
+<img src="DRINK WATER.webp"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Drink Water</h4>
+
+<p>
+Stay hydrated by drinking plenty of water
+throughout the day.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow h-100">
+
+<img src="healthy food.webp"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Healthy Food</h4>
+
+<p>
+Eat balanced meals with fruits,
+vegetables, proteins and whole grains.
+</p>
+
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow h-100">
+
+<img src="exerise daily.jpg"
+class="card-img-top">
+
+<div class="card-body">
+
+<h4>Exercise Daily</h4>
+
+<p>
+Spend at least 30 minutes exercising
+to keep your body active.
+</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section><!-- ================= BMI CALCULATOR ================= -->
+
+<section class="container py-5" id="bmi">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">BMI Calculator</h2>
+        <p>Calculate your Body Mass Index (BMI)</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+
+            <div class="card shadow p-4">
+
+                <div class="mb-3">
+                    <label class="form-label">Height (cm)</label>
+                    <input type="number" id="height" class="form-control" placeholder="Enter height">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Weight (kg)</label>
+                    <input type="number" id="weight" class="form-control" placeholder="Enter weight">
+                </div>
+
+                <button class="btn btn-success w-100" onclick="calculateBMI()">
+                    Calculate BMI
+                </button>
+
+                <h4 class="text-center mt-4" id="bmiResult"></h4>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= WATER INTAKE CALCULATOR ================= -->
+
+<section class="bg-light py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Daily Water Intake Calculator</h2>
+<p>Estimate your recommended daily water intake.</p>
+</div>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="card shadow p-4">
+
+<div class="mb-3">
+<label class="form-label">Your Weight (kg)</label>
+
+<input
+type="number"
+id="waterWeight"
+class="form-control"
+placeholder="Enter weight">
+</div>
+
+<button
+class="btn btn-primary w-100"
+onclick="calculateWater()">
+
+Calculate Water Intake
+
+</button>
+
+<h4
+class="text-center mt-4"
+id="waterResult"></h4>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function calculateBMI(){
+
+let h=document.getElementById("height").value;
+let w=document.getElementById("weight").value;
+
+if(h=="" || w==""){
+document.getElementById("bmiResult").innerHTML="Please enter all values.";
+return;
+}
+
+let bmi=w/((h/100)*(h/100));
+
+let status="";
+
+if(bmi<18.5){
+status="Underweight";
+}
+else if(bmi<25){
+status="Healthy";
+}
+else if(bmi<30){
+status="Overweight";
+}
+else{
+status="Obese";
+}
+
+document.getElementById("bmiResult").innerHTML=
+"BMI : "+bmi.toFixed(1)+" ("+status+")";
+
+}
+
+function calculateWater(){
+
+let weight=document.getElementById("waterWeight").value;
+
+if(weight==""){
+document.getElementById("waterResult").innerHTML="Enter your weight.";
+return;
+}
+
+let water=(weight*35)/1000;
+
+document.getElementById("waterResult").innerHTML=
+"You should drink approximately <b>"+water.toFixed(1)+" Liters</b> of water daily.";
+
+}
+
+</script><!-- ================= NUTRITION SECTION ================= -->
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-success">Healthy Nutrition</h2>
+        <p>Healthy eating is the foundation of a healthy life.</p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow h-100">
+                <img src="eat f fruits.webp" class="card-img-top" alt="Fruits">
+                <div class="card-body text-center">
+                    <h5>Fresh Fruits</h5>
+                    <p>Rich in vitamins, minerals, and antioxidants.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow h-100">
+                <img src="green vegetables.jpg" class="card-img-top" alt="Vegetables">
+                <div class="card-body text-center">
+                    <h5>Green Vegetables</h5>
+                    <p>Provide fiber, iron, calcium, and essential nutrients.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow h-100">
+                <img src="hf dairl.webp" class="card-img-top" alt="Milk">
+                <div class="card-body text-center">
+                    <h5>Milk & Dairy</h5>
+                    <p>Supports healthy bones and teeth with calcium and protein.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow h-100">
+                <img src="eat nuts.jpg" class="card-img-top" alt="Nuts">
+                <div class="card-body text-center">
+                    <h5>Nuts & Seeds</h5>
+                    <p>Healthy fats, protein, and heart-friendly nutrients.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= EXERCISE SECTION ================= -->
+
+<section class="bg-light py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold text-primary">Exercise Every Day</h2>
+<p>Regular physical activity keeps your body and mind healthy.</p>
+</div>
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<img src="exerise daily.jpg"
+class="img-fluid rounded shadow"
+alt="Exercise">
+
+</div>
+
+<div class="col-lg-6">
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">🏃 Walk for 30 minutes daily</li>
+<li class="list-group-item">🚴 Ride a bicycle regularly</li>
+<li class="list-group-item">🧘 Practice yoga and stretching</li>
+<li class="list-group-item">💪 Strength training 2–3 times a week</li>
+<li class="list-group-item">❤️ Exercise helps maintain heart health</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MENTAL HEALTH ================= -->
+
+<section class="container py-5">
+
+<div class="text-center mb-5">
+<h2 class="fw-bold text-info">Mental Health</h2>
+<p>Take care of your mind as much as your body.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card shadow text-center h-100 p-4">
+<h4>😊 Stay Positive</h4>
+<p>Practice gratitude and maintain a positive attitude.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow text-center h-100 p-4">
+<h4>🧘 Meditation</h4>
+<p>Meditate for 10–15 minutes daily to reduce stress.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow text-center h-100 p-4">
+<h4>😴 Good Sleep</h4>
+<p>Sleep 7–9 hours every night for better mental health.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="container py-5">
+
+<h2 class="text-center text-primary mb-5">
+Frequently Asked Questions
+</h2>
+
+<div class="accordion" id="faqAccordion">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+How much water should I drink daily?
+</button>
+</h2>
+
+<div id="faq1" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Most adults need around 2–3 liters of water per day, depending on activity level and climate.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+How much exercise is recommended?
+</button>
+</h2>
+
+<div id="faq2" class="accordion-collapse collapse">
+<div class="accordion-body">
+Aim for at least 150 minutes of moderate exercise each week.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+How many hours should adults sleep?
+</button>
+</h2>
+
+<div id="faq3" class="accordion-collapse collapse">
+<div class="accordion-body">
+Most adults benefit from 7–9 hours of quality sleep every night.
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="bg-success text-white py-5">
+
+<div class="container text-center">
+
+<h2>Subscribe to Our Newsletter</h2>
+
+<p>Get the latest health tips directly in your inbox.</p>
+
+<div class="row justify-content-center">
+
+<div class="col-md-6">
+
+<div class="input-group">
+
+<input type="email"
+class="form-control"
+placeholder="Enter your email">
+
+<button class="btn btn-warning">
+Subscribe
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4">
+<h4>Health Tips</h4>
+<p>
+Helping people live healthier lives through simple and practical advice.
+</p>
+</div>
+
+<div class="col-md-4">
+<h4>Quick Links</h4>
+<ul class="list-unstyled">
+<li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+<li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+<li><a href="health-tips.html" class="text-white text-decoration-none">Health Tips</a></li>
+<li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+</ul>
+</div>
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+© 2026 Health Tips. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
